@@ -1,0 +1,24 @@
+{
+  "name": "decision-service",
+  "version": "0.1.0",
+  "description": "Private decision service skeleton: a local HTTP process and an MCP server over one shared core.",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "decision-service": "src/http-server.js",
+    "decision-mcp": "src/mcp-server.js"
+  },
+  "scripts": {
+    "start": "node src/http-server.js",
+    "start:mcp": "node src/mcp-server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.6.5"
+  }
+}
